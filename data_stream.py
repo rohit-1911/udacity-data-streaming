@@ -85,6 +85,7 @@ if __name__ == "__main__":
     spark = SparkSession \
         .builder \
         .master("local[*]") \
+        .config("spark.ui.port",3000) \
         .appName("KafkaSparkStructuredStreaming") \
         .getOrCreate()
 
